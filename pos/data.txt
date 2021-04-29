@@ -1,0 +1,10 @@
+$ns at 0.0 "$node(0) setdest 87 76 3000.0
+$ns at 0.0 "$node(1) setdest 366 60 3000.0
+$ns at 0.0 "$node(2) setdest 113 204 3000.0
+$ns at 0.0 "$node(3) setdest 527 272 3000.0
+$ns at 0.0 "$node(4) setdest 383 160 3000.0
+$ns at 0.0 "$node(5) setdest 254 325 3000.0
+$ns at 0.0 "$node(6) setdest 88 529 3000.0
+$ns at 0.0 "$node(7) setdest 680 538 3000.0
+$ns at 0.0 "$node(8) setdest 452 408 3000.0
+$ns at 0.0 "$node(9) setdest 145 345 3000.0
