@@ -92,22 +92,20 @@ for {set i 0} {$i < 10} {incr i} {
 	#$ns at 0.0 "$node($i) setdest [expr 10 + round(rand()*700)] [expr 10 + round(rand()*700)] 100.0"
 }
 
-$ns at 0.0 "$node(0) setdest 127 52 3000.0"
-$ns at 0.0 "$node(1) setdest 298 59 3000.0"
-$ns at 0.0 "$node(2) setdest 188 112 3000.0"
-$ns at 0.0 "$node(3) setdest 376 129 3000.0"
-$ns at 0.0 "$node(4) setdest 119 139 3000.0"
-$ns at 0.0 "$node(5) setdest 291 162 3000.0"
-$ns at 0.0 "$node(6) setdest 138 197 3000.0"
-$ns at 0.0 "$node(7) setdest 70 217 3000.0"
-$ns at 0.0 "$node(8) setdest 192 246 3000.0"
-$ns at 0.0 "$node(9) setdest 84 274 3000.0"
+source pos/data.txt
+
+$ns at 0.0 "$node(0) color blue"
+$node(0) color "blue"
+$ns at 0.0 "$node(6) color red"
+$node(6) color "red"
+
+$ns at 0.0 "[$node(3) set ragent_] malicious"
 
 set cbr [new Agent/CBR]
 $ns attach-agent $node(0) $cbr
 $cbr set packetSize_ 1000
 $cbr set interval_ 0.030
-$ns connect $cbr $sink(9)
+$ns connect $cbr $sink(6)
 
 $ns at 0.5 "$cbr start"
 $ns at 10.0 "finish"
