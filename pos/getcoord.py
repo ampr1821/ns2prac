@@ -15,7 +15,7 @@ def click_event(event, x, y, flags, params):
 		# on the Shell
 		fh = open('data.txt', 'a')
 		print(x, ' ', y)
-		fh.write('$ns at 0.0 "$node(' + str(v) + ') setdest ' + str(x) + ' ' + str(y) + ' 3000.0\n')
+		fh.write('$ns at 0.0 "$node(' + str(v) + ') setdest ' + str(x) + ' ' + str(y) + ' 3000.0"\n')
 		fh.close()
 		v += 1
 
@@ -34,7 +34,7 @@ def click_event(event, x, y, flags, params):
 		# on the Shell
 		fh = open('data.txt', 'a')
 		print(x, ' ', y)
-		fh.write('$ns at 0.0 "$node(' + str(v) + ') setdest ' + str(x) + ' ' + str(y) + ' 3000.0')
+		fh.write('$ns at 0.0 "$node(' + str(v) + ') setdest ' + str(x) + ' ' + str(y) + ' 3000.0"\n')
 		fh.close()
 		v += 1
 

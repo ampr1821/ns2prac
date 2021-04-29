@@ -92,16 +92,16 @@ for {set i 0} {$i < 10} {incr i} {
 	#$ns at 0.0 "$node($i) setdest [expr 10 + round(rand()*700)] [expr 10 + round(rand()*700)] 100.0"
 }
 
-$ns at 0.0 "$node(0) setdest 50.0 750.0 3000.0"
-$ns at 0.0 "$node(1) setdest 70.0 695.0 3000.0"
-$ns at 0.0 "$node(2) setdest 115.0 735.0 3000.0"
-$ns at 0.0 "$node(3) setdest 135.0 675.0 3000.0"
-$ns at 0.0 "$node(4) setdest 125.0 620.0 3000.0"
-$ns at 0.0 "$node(5) setdest 200.0 665.0 3000.0"
-$ns at 0.0 "$node(6) setdest 240.0 605.0 3000.0"
-$ns at 0.0 "$node(7) setdest 260.0 545.0 3000.0"
-$ns at 0.0 "$node(8) setdest 305.0 595.0 3000.0"
-$ns at 0.0 "$node(9) setdest 330.0 535.0 3000.0"
+$ns at 0.0 "$node(0) setdest 127 52 3000.0"
+$ns at 0.0 "$node(1) setdest 298 59 3000.0"
+$ns at 0.0 "$node(2) setdest 188 112 3000.0"
+$ns at 0.0 "$node(3) setdest 376 129 3000.0"
+$ns at 0.0 "$node(4) setdest 119 139 3000.0"
+$ns at 0.0 "$node(5) setdest 291 162 3000.0"
+$ns at 0.0 "$node(6) setdest 138 197 3000.0"
+$ns at 0.0 "$node(7) setdest 70 217 3000.0"
+$ns at 0.0 "$node(8) setdest 192 246 3000.0"
+$ns at 0.0 "$node(9) setdest 84 274 3000.0"
 
 set cbr [new Agent/CBR]
 $ns attach-agent $node(0) $cbr
