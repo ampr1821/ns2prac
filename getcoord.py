@@ -1,25 +1,24 @@
 # importing the module
-import cv2
+import cv2,sys
 
 v = 0
 
 # function to display the coordinates of
 # of the points clicked on the image
 def click_event(event, x, y, flags, params):
-
 	global v
+	if(v==10):
+		sys.exit(0)
 	# checking for left mouse clicks
 	if event == cv2.EVENT_LBUTTONDOWN:
 
 		# displaying the coordinates
 		# on the Shell
-		if v < 10:
-			fh = open('data.txt', 'a')
-			print(x, ' ', y)
-			fh.write('$ns at 0.0 "$node(' + str(v) + ') setdest ' + str(x) + ' ' + str(y) + ' 3000.0"\n')
-			fh.close()
-		v += 1
-
+		
+		fh = open('data.txt', 'a')
+		print(x, ' ', y)
+		fh.write('$ns at 0.0 "$node(' + str(v) + ') setdest ' + str(x) + ' ' + str(y) + ' 3000.0"\n')
+		fh.close()
 		# displaying the coordinates
 		# on the image window
 		font = cv2.FONT_HERSHEY_SIMPLEX
@@ -27,19 +26,19 @@ def click_event(event, x, y, flags, params):
 					str(y), (x,y), font,
 					1, (255, 0, 0), 2)
 		cv2.imshow('image', img)
+		v += 1
+
+		
 
 	# checking for right mouse clicks	
 	if event==cv2.EVENT_RBUTTONDOWN:
-
+		
 		# displaying the coordinates
 		# on the Shell
-		if v < 10:
-			fh = open('data.txt', 'a')
-			print(x, ' ', y)
-			fh.write('$ns at 0.0 "$node(' + str(v) + ') setdest ' + str(x) + ' ' + str(y) + ' 3000.0"\n')
-			fh.close()
-		v += 1
-
+		fh = open('data.txt', 'a')
+		print(x, ' ', y)
+		fh.write('$ns at 0.0 "$node(' + str(v) + ') setdest ' + str(x) + ' ' + str(y) + ' 3000.0"\n')
+		fh.close()
 		# displaying the coordinates
 		# on the image window
 		font = cv2.FONT_HERSHEY_SIMPLEX
@@ -52,6 +51,9 @@ def click_event(event, x, y, flags, params):
 					(x,y), font, 1,
 					(255, 255, 0), 2)
 		cv2.imshow('image', img)
+		v += 1
+
+		
 
 # driver function
 if __name__=="__main__":
