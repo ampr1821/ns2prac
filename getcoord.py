@@ -13,10 +13,11 @@ def click_event(event, x, y, flags, params):
 
 		# displaying the coordinates
 		# on the Shell
-		fh = open('data.txt', 'a')
-		print(x, ' ', y)
-		fh.write('$ns at 0.0 "$node(' + str(v) + ') setdest ' + str(x) + ' ' + str(y) + ' 3000.0"\n')
-		fh.close()
+		if v < 10:
+			fh = open('data.txt', 'a')
+			print(x, ' ', y)
+			fh.write('$ns at 0.0 "$node(' + str(v) + ') setdest ' + str(x) + ' ' + str(y) + ' 3000.0"\n')
+			fh.close()
 		v += 1
 
 		# displaying the coordinates
@@ -32,10 +33,11 @@ def click_event(event, x, y, flags, params):
 
 		# displaying the coordinates
 		# on the Shell
-		fh = open('data.txt', 'a')
-		print(x, ' ', y)
-		fh.write('$ns at 0.0 "$node(' + str(v) + ') setdest ' + str(x) + ' ' + str(y) + ' 3000.0"\n')
-		fh.close()
+		if v < 10:
+			fh = open('data.txt', 'a')
+			print(x, ' ', y)
+			fh.write('$ns at 0.0 "$node(' + str(v) + ') setdest ' + str(x) + ' ' + str(y) + ' 3000.0"\n')
+			fh.close()
 		v += 1
 
 		# displaying the coordinates

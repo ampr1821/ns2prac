@@ -92,7 +92,7 @@ for {set i 0} {$i < 10} {incr i} {
 	#$ns at 0.0 "$node($i) setdest [expr 10 + round(rand()*700)] [expr 10 + round(rand()*700)] 100.0"
 }
 
-source pos/data.txt
+source data.txt
 
 $ns at 0.0 "$node(0) color blue"
 $node(0) color "blue"
