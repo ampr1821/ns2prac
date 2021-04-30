@@ -99,7 +99,7 @@ $node(0) color "blue"
 $ns at 0.0 "$node(6) color red"
 $node(6) color "red"
 
-$ns at 0.0 "[$node(3) set ragent_] malicious"
+#$ns at 0.0 "[$node(3) set ragent_] malicious"
 
 set cbr [new Agent/CBR]
 $ns attach-agent $node(0) $cbr

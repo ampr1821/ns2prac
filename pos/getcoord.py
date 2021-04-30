@@ -55,8 +55,7 @@ def click_event(event, x, y, flags, params):
 if __name__=="__main__":
 
 	# reading the image
-	img = cv2.imread('sample.jpg', 1)
-	
+	img = cv2.imread('sample.jpg', 1); fh = open('data.txt', 'w'); fh.write(''); fh.close()
 	# displaying the image
 	cv2.imshow('image', img)
 
